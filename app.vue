@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-end">
-    Hello world!
-  </h1>
+  <div>
+  
+    <!-- This is where the routed page will be rendered -->
+    <NuxtPage />
+  </div>
 </template>
