@@ -3,22 +3,20 @@ package main
 import (
 	"fmt"
 	"net/http"
-
-	log "github.com/sirupsen/logrus"
 )
 
+// HelloHandler responds with a "Hello, world!" message.
+func HelloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, world!")
+}
+
 func main() {
-	http.Handle("/", loggingMiddleware(http.HandlerFunc(handler)))
-	http.ListenAndServe(":8080", nil)
-}
+	// Register the handler function for the "/" route.
+	http.HandleFunc("/", HelloHandler)
 
-func handler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "package main #14")
-}
-
-func loggingMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
-		log.Infof("uri: %s", req.RequestURI)
-		next.ServeHTTP(w, req)
-	})
+	// Start the server on port 8080.
+	fmt.Println("Server is listening on port 8080...")
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		fmt.Println("Error starting server:", err)
+	}
 }
