@@ -1,6 +1,6 @@
 <!-- components/RecipeList.vue -->
 <script setup>
-import { recipes } from '~/data/db.json';
+// import { recipes } from '~/data/db.json';
 </script>
 
 <template>
