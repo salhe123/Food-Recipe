@@ -5,7 +5,6 @@ import { ref } from 'vue';
 const email = ref('');
 const password = ref('');
 const router = useRouter();
-
 const handleLogin = async () => {
   try {
     console.log('Logging in with', { email: email.value, password: password.value });
