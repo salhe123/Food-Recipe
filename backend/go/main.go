@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	log.Println("Starting server on port 8080...")
 	http.HandleFunc("/signup", signupHandler)
 	http.HandleFunc("/login", loginHandler)
 

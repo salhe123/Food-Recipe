@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import gql from 'graphql-tag';
-import client from '@/apolloClient'; // Adjust the path based on your project structure
-
+import { apolloClient } from "../ApolloClient"; 
 const email = ref('');
 const username = ref('');
 const password = ref('');

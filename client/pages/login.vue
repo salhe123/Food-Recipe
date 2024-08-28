@@ -1,4 +1,4 @@
-<script setup>
+<script >
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
@@ -60,7 +60,7 @@ const handleLogin = async () => {
       </form>
       <p class="text-center text-sm text-gray-600">
         Don't have an account?
-        <nuxt-link to="/signup" class="text-blue-600 hover:underline"> Sign up</nuxt-link>
+        <nuxt-link to="/signup" class="text-blue-600 hover:underline">  Sign up</nuxt-link>
       </p>
     </div>
   </div>

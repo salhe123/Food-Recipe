@@ -5,16 +5,13 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/apollo'],
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
- 
-  
-  
-
 
   apollo: {
     clients: {
@@ -23,4 +20,6 @@ export default defineNuxtConfig({
       }
     },
   },
+
+  compatibilityDate: '2024-08-28',
 });
